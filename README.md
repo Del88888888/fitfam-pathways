@@ -3,9 +3,10 @@
 Repo suggestion: fitfam-pathways
 
 PINs:
-- PIN 1: 1886
-- PIN 2: 2828
-- PIN 3: 3698
+- PIN 1 after first lap, unlock pathways: 1886
+- PIN 2 after completing Phase 2: 2828
+- PIN 3 after completing Phase 3, unlock Phase 4: 3698
+- PIN 4 after completing Phase 4, unlock Phase 5: 4680
 
 Exercises:
 - Phase 1: Run 1 lap
@@ -53,3 +54,7 @@ Path location assets:
 - missing-connection-location-b-photo.jpg
 - missing-connection-location-c-map.jpg
 - missing-connection-location-c-photo.jpg
+
+Final group photo WhatsApp wording:
+Post it in WhatsApp:
+[Name of your path]

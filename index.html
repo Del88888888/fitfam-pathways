@@ -14,6 +14,7 @@
 const PIN1 = "1886";
 const PIN2 = "2828";
 const PIN3 = "3698";
+const PIN4 = "4680";
 const paths = {"pursuing-dreams": {"title": "Pursuing Dreams", "phase2_title": "Phase 2 — The Choice & Early Progress", "phase2_story": "You chose something uncertain.\n\nSomething not everyone understands.\n\nVoices around you say:\n\n“Be realistic.”\n“Be safe.”\n“Choose something stable.”\n\nEven at home…\n\nthere is doubt.\n\nBut you kept going.\n\nAnd things started to work.\n\nYou improved.\nYou progressed.\n\nYou started winning.\n\nFor a moment…\n\nit feels like you were right.", "phase3_title": "Phase 3 — The Wall", "phase3_story": "Then everything slows.\n\nYou hit a ceiling.\n\nNo matter what you do…\n\nnothing moves.\n\nYou begin to question:\n\n“Was everyone right?”\n“Should I stop?”", "phase4_title": "Phase 4 — The Call", "phase4_story": "You almost gave up.\n\nThen—\n\nyou call home.\n\nAnd instead of doubt…\n\nyou hear:\n\n“Don’t give up.”\n\n“Not just because it’s hard…”\n\n“But because you chose this.”", "phase5_title": "Phase 5 — Breakthrough", "phase5_story": "So you kept going.\n\nThrough doubt.\nThrough setbacks.\n\nAnd eventually—\n\nyou break through.\n\nNot just success.\n\nGrowth.\n\nThis path was never about talent.\n\nIt was about choosing not to give up."}, "quiet-impact": {"title": "Quiet Impact", "phase2_title": "Phase 2 — Small Actions", "phase2_story": "You are not loud.\n\nYou don’t seek attention.\n\nBut you notice things.\n\nYou help.\n\nSmall things.\n\nCarrying something for someone.\nPicking something up that was lost.\nHelping someone get where they need to go.\n\nIt feels…\n\nsmall.", "phase3_title": "Phase 3 — The First Act", "phase3_story": "You see something happen.\n\nSomeone drops something.\n\nWithout thinking—\n\nyou run to return it.\n\nNo hesitation.\n\nJust action.", "phase4_title": "Phase 4 — Another Act", "phase4_story": "Another moment.\n\nAnother situation.\n\nSomeone needs help.\n\nYou step in again.\n\nNo recognition.\n\nNo reward.\n\nJust helping.", "phase5_title": "Phase 5 — What You Never Saw", "phase5_story": "But what you didn’t see…\n\nwas everything that came after.\n\nHelping someone get home earlier—\n\nmeans more time with their child.\n\nHelping a family—\n\nmeans more time together.\n\nHelping someone find their lost phone—\n\nmeans saving memories.\n\nPhotos.\nVideos.\nMoments that can never be replaced.\n\nHelping a child—\n\ncan give them support.\n\nStructure.\n\nTime with loved ones who may not have much time left.\n\nWhat seemed small…\n\nwas never small.\n\nNot all impact is seen.\n\nBut it always reaches further than you think."}, "comeback": {"title": "The Comeback", "phase2_title": "Phase 2 — The Fall & The Load", "phase2_story": "At one point…\n\nthings were working.\n\nThen something changed.\n\nA setback.\nA failure.\n\nAnd suddenly—\n\nmore was placed on you.\n\nResponsibility.\nExpectations.\n\nWeight you didn’t ask for.\n\nYou keep going.\n\nBecause you have to.\n\nPeople depend on you.\n\nEven when you feel tired.\n\nEven when you feel behind.", "phase3_title": "Phase 3 — The Breaking Point", "phase3_story": "You slow down.\n\nYou question everything.\n\n“Can I really carry this?”\n\n“I’m already struggling…”\n\n“And now this?”", "phase4_title": "Phase 4 — The Decision", "phase4_story": "You have a choice.\n\nStay here.\n\nOr move forward—\n\nwith everything you carry.\n\nYou choose…\n\nto move.", "phase5_title": "Phase 5 — The Return", "phase5_story": "You don’t come back the same.\n\nYou come back stronger.\n\nBecause of what you carried.\n\nBecause of what you went through.\n\nBecause you didn’t stop.\n\nWhat almost broke you…\n\nbecame what built you."}, "second-chance": {"title": "Second Chance", "phase2_title": "Phase 2 — The Loss & The Low Point", "phase2_story": "It mattered.\n\nA lot.\n\nAnd now…\n\nit’s gone.\n\nYou don’t feel like moving.\n\nYou don’t feel like trying.\n\nBut still—\n\nyou show up.\n\nYou work out.\n\nDay after day.\n\nThrough discomfort.\n\nThrough heaviness.\n\nNot because it’s easy.\n\nBut because you keep going.", "phase3_title": "Phase 3 — The Slow Shift", "phase3_story": "Nothing changes overnight.\n\nBut something small shifts.\n\nA little more energy.\n\nA little more clarity.", "phase4_title": "Phase 4 — The Second Chance", "phase4_story": "Not something big.\n\nJust…\n\na moment where you realise—\n\nyou can move forward again.", "phase5_title": "Phase 5 — Rebuild", "phase5_story": "You begin again.\n\nNot the same.\n\nBut stronger in a different way.\n\nBecause you didn’t stop—\n\neven when it was hard.\n\nA second life begins with a small decision.\n\nAnd it grows through consistency—\n\nshowing up,\n\neven when you feel at your lowest."}, "missing-connection": {"title": "Missing Connection", "phase2_title": "Phase 2 — Close & Almost", "phase2_story": "You’ve both been here.\n\nSame place.\n\nSame sessions.\n\nSame workouts.\n\nBut never really connected.\n\nYou notice each other.\n\nSometimes.\n\nSmall moments.\n\nBut nothing happens.\n\nJust… passing by.", "phase3_title": "Phase 3 — Awareness", "phase3_story": "You begin to notice more.\n\nFamiliar faces.\n\nFamiliar presence.\n\nSomething feels close.\n\nBut not quite there.", "phase4_title": "Phase 4 — The Fitness Moment", "phase4_story": "Then one session—\n\nduring a workout—\n\nsomething changes.\n\nYou move at the same pace.\n\nSame rhythm.\n\nSame energy.\n\nYou push through the same effort.\n\nAnd in that moment—\n\nit clicks.", "phase5_title": "Phase 5 — Connection", "phase5_story": "From that moment…\n\neverything changes.\n\nIt’s no longer just workouts.\n\nIt’s shared moments.\n\nShared effort.\n\nA connection built over time.\n\nNot sudden.\n\nBut real.\n\nSome connections are not instant.\n\nThey are built—\n\nmoment by moment."}};
 let selectedPathKey = null;
 let selectedPath = null;
@@ -56,7 +57,7 @@ Stay together.
 No shortcuts.
 No one gets left behind.
 
-When your team returns, enter the PIN to choose your path.</p>
+When your team returns to the starting point, enter PIN 1 to choose your path.</p>
       <button type="button" onclick="screenPin1()">START LAP</button>
     </section>
   `);
@@ -66,12 +67,12 @@ function screenPin1() {
   show(`
     <section class="card">
       <h1>Lap Complete</h1>
-      <p class="story">Return to HQ.
+      <p class="story">Return to the starting point.
 
 Enter PIN 1 to unlock your path choices.</p>
       <form onsubmit="return checkPin1(event)">
         <input id="pin1" type="tel" inputmode="numeric" placeholder="PIN 1" autocomplete="off">
-        <button type="submit">UNLOCK PATHS</button>
+        <button type="submit">UNLOCK PATHWAYS</button>
       </form>
     </section>
   `);
@@ -114,10 +115,10 @@ function screenPhase2() {
       <p class="story">${selectedPath.phase2_story}</p>
       ${locationImages('A')}
       <div class="exercise">Exercise: Jumping Lunges x 50</div>
-      <p class="note">Complete the exercise at Location A, then return to HQ for PIN 2.</p>
+      <p class="note">Complete the exercise at Location A, then return to the starting point for PIN 2.</p>
       <form onsubmit="return checkPin2(event)">
         <input id="pin2" type="tel" inputmode="numeric" placeholder="PIN 2" autocomplete="off">
-        <button type="submit">UNLOCK NEXT PHASE</button>
+        <button type="submit">UNLOCK PHASE 3</button>
       </form>
     </section>
   `);
@@ -138,9 +139,20 @@ function screenPhase3() {
       <p class="story">${selectedPath.phase3_story}</p>
       ${locationImages('B')}
       <div class="exercise">Exercise: Burpees x 20</div>
-      <button type="button" onclick="screenPhase4()">CONTINUE TO LOCATION C</button>
+      <p class="note">Complete the exercise at Location B, then return to the starting point for PIN 3.</p>
+      <form onsubmit="return checkPin3(event)">
+        <input id="pin3" type="tel" inputmode="numeric" placeholder="PIN 3" autocomplete="off">
+        <button type="submit">UNLOCK PHASE 4</button>
+      </form>
     </section>
   `);
+}
+
+function checkPin3(event) {
+  event.preventDefault();
+  if (cleanInput(document.getElementById('pin3').value) === PIN3) screenPhase4();
+  else wrongPin();
+  return false;
 }
 
 function screenPhase4() {
@@ -151,18 +163,18 @@ function screenPhase4() {
       <p class="story">${selectedPath.phase4_story}</p>
       ${locationImages('C')}
       <div class="exercise">Exercise: Push-ups x 30</div>
-      <p class="note">Complete the exercise at Location C, then return to HQ for PIN 3.</p>
-      <form onsubmit="return checkPin3(event)">
-        <input id="pin3" type="tel" inputmode="numeric" placeholder="PIN 3" autocomplete="off">
-        <button type="submit">UNLOCK FINAL PHASE</button>
+      <p class="note">Complete the exercise at Location C, then return to the starting point for PIN 4.</p>
+      <form onsubmit="return checkPin4(event)">
+        <input id="pin4" type="tel" inputmode="numeric" placeholder="PIN 4" autocomplete="off">
+        <button type="submit">UNLOCK PHASE 5</button>
       </form>
     </section>
   `);
 }
 
-function checkPin3(event) {
+function checkPin4(event) {
   event.preventDefault();
-  if (cleanInput(document.getElementById('pin3').value) === PIN3) screenPhase5();
+  if (cleanInput(document.getElementById('pin4').value) === PIN4) screenPhase5();
   else wrongPin();
   return false;
 }
@@ -174,7 +186,7 @@ function screenPhase5() {
       <h2>${selectedPath.phase5_title}</h2>
       <p class="story">${selectedPath.phase5_story}</p>
       <div class="exercise">Final Exercise: Run 1 final lap</div>
-      <p class="note">Finish together. Return to the starting location for the final ending.</p>
+      <p class="note">Finish together. Return to the starting point for the final ending.</p>
       <button type="button" onclick="screenFinalEnding()">FINAL ENDING</button>
     </section>
   `);
@@ -227,7 +239,7 @@ No one gets left behind.
 
 Post it in WhatsApp:
 
-[LOCATION] Final Pathways Photo ✅</p>
+[Name of your path]</p>
       </div>
       <p class="story">You chose your path.
 
