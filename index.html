@@ -3,10 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Choose Your Path</title>
+<title>FitFam Pathways</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<img src="my-photo.jpg" id="cornerLogo" alt="FitFam host photo">
 <div id="app"></div>
 <audio id="endingMusic" src="ending-music.mp3" preload="auto"></audio>
 <script>
@@ -27,15 +28,26 @@ function show(html) {
   window.scrollTo(0, 0);
 }
 
-function wrongPin() {
-  alert('ACCESS DENIED');
+function wrongPin() { alert('ACCESS DENIED'); }
+
+function locationImages(locationLetter) {
+  return `
+    <div class="locationBox">
+      <h3>Location ${locationLetter}</h3>
+      <p class="note">Use the map and photo below to find the correct location. Stay together. No one gets left behind.</p>
+      <p class="mediaTitle">Map</p>
+      <img class="locationImage" src="${selectedPathKey}-location-${locationLetter.toLowerCase()}-map.jpg" alt="Location ${locationLetter} map">
+      <p class="mediaTitle">Location Photo</p>
+      <img class="locationImage" src="${selectedPathKey}-location-${locationLetter.toLowerCase()}-photo.jpg" alt="Location ${locationLetter} photo">
+    </div>
+  `;
 }
 
 function screenStart() {
   show(`
     <section class="card intro">
-      <h1>Choose Your Path</h1>
-      <h2>FitFam Life Paths</h2>
+      <h1>FitFam Pathways</h1>
+      <h2>Choose Your Path</h2>
       <p class="story">Today begins with movement.
 
 Run 1 full lap as a team.
@@ -67,11 +79,8 @@ Enter PIN 1 to unlock your path choices.</p>
 
 function checkPin1(event) {
   event.preventDefault();
-  if (cleanInput(document.getElementById('pin1').value) === PIN1) {
-    screenChoosePath();
-  } else {
-    wrongPin();
-  }
+  if (cleanInput(document.getElementById('pin1').value) === PIN1) screenChoosePath();
+  else wrongPin();
   return false;
 }
 
@@ -103,8 +112,9 @@ function screenPhase2() {
       <h1>${selectedPath.title}</h1>
       <h2>${selectedPath.phase2_title}</h2>
       <p class="story">${selectedPath.phase2_story}</p>
+      ${locationImages('A')}
       <div class="exercise">Exercise: Jumping Lunges x 50</div>
-      <p class="note">Complete the exercise together, then return to HQ for PIN 2.</p>
+      <p class="note">Complete the exercise at Location A, then return to HQ for PIN 2.</p>
       <form onsubmit="return checkPin2(event)">
         <input id="pin2" type="tel" inputmode="numeric" placeholder="PIN 2" autocomplete="off">
         <button type="submit">UNLOCK NEXT PHASE</button>
@@ -115,11 +125,8 @@ function screenPhase2() {
 
 function checkPin2(event) {
   event.preventDefault();
-  if (cleanInput(document.getElementById('pin2').value) === PIN2) {
-    screenPhase3();
-  } else {
-    wrongPin();
-  }
+  if (cleanInput(document.getElementById('pin2').value) === PIN2) screenPhase3();
+  else wrongPin();
   return false;
 }
 
@@ -129,8 +136,9 @@ function screenPhase3() {
       <h1>${selectedPath.title}</h1>
       <h2>${selectedPath.phase3_title}</h2>
       <p class="story">${selectedPath.phase3_story}</p>
+      ${locationImages('B')}
       <div class="exercise">Exercise: Burpees x 20</div>
-      <button type="button" onclick="screenPhase4()">CONTINUE TO PHASE 4</button>
+      <button type="button" onclick="screenPhase4()">CONTINUE TO LOCATION C</button>
     </section>
   `);
 }
@@ -141,8 +149,9 @@ function screenPhase4() {
       <h1>${selectedPath.title}</h1>
       <h2>${selectedPath.phase4_title}</h2>
       <p class="story">${selectedPath.phase4_story}</p>
+      ${locationImages('C')}
       <div class="exercise">Exercise: Push-ups x 30</div>
-      <p class="note">Complete the exercise together, then return to HQ for PIN 3.</p>
+      <p class="note">Complete the exercise at Location C, then return to HQ for PIN 3.</p>
       <form onsubmit="return checkPin3(event)">
         <input id="pin3" type="tel" inputmode="numeric" placeholder="PIN 3" autocomplete="off">
         <button type="submit">UNLOCK FINAL PHASE</button>
@@ -153,11 +162,8 @@ function screenPhase4() {
 
 function checkPin3(event) {
   event.preventDefault();
-  if (cleanInput(document.getElementById('pin3').value) === PIN3) {
-    screenPhase5();
-  } else {
-    wrongPin();
-  }
+  if (cleanInput(document.getElementById('pin3').value) === PIN3) screenPhase5();
+  else wrongPin();
   return false;
 }
 
@@ -180,9 +186,7 @@ function playEndingMusic() {
   finalMusicStarted = true;
   music.currentTime = 0;
   music.volume = 0.8;
-  music.play().catch(function() {
-    // If browser blocks audio, the page still works.
-  });
+  music.play().catch(function() {});
 }
 
 function screenFinalEnding() {
@@ -210,10 +214,21 @@ But every one of you…
 
 kept moving.
 
-One more step.
+Now one final moment.
 
 Together.</p>
-      <div class="exercise">Final Group Action: One movement together</div>
+      <div class="photoBox">
+        <h2>FINAL GROUP PHOTO</h2>
+        <p class="story">Take one final group photo at the starting location.
+
+Everyone must be visible.
+
+No one gets left behind.
+
+Post it in WhatsApp:
+
+[LOCATION] Final Pathways Photo ✅</p>
+      </div>
       <p class="story">You chose your path.
 
 You lived it.
